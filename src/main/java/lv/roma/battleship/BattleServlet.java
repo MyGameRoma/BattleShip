@@ -36,18 +36,16 @@ public class BattleServlet extends HttpServlet {
         var game = (Game) request.getSession().getAttribute("game");
 
         if (player ==null) {
-            response.sendRedirect("?index.html");
+            response.sendRedirect("/index.html");
             return;
         }
 
         if (game.isReady()) {
             response.sendRedirect("/setup");
         } else {
-            request.getRequestDispatcher("/WEB-INF/waitingRoomLogin.jsp").include(request,response);
+            request.getRequestDispatcher("/WEB-INF/waitingRoomLogin.jsp")
+                    .include(request,response);
 
         }
-
-        request.getRequestDispatcher("/WEB-INF/waitingRoomLogin.jsp")
-                .include(request, response);
     }
 }
