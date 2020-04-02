@@ -1,9 +1,9 @@
 package lv.roma.battleship.model;
 
 public class GameManager {
-    private static Game incomplete;
+    private Game incomplete;
 
-    public static Game getIncompleteGameAndJoin(Player player) {
+    public synchronized Game getIncompleteGameAndJoin(Player player) {
         if (incomplete == null) {
             incomplete = new Game();
         }
