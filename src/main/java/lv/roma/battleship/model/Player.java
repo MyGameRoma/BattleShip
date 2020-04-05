@@ -21,8 +21,6 @@ public class Player {
         return enemyField;
     }
 
-    public boolean isReadyToPlay() {
-        return  ownField.isValid();
-    }
+    public boolean isReadyToPlay() { return  ownField.isValid(); }
 
 }

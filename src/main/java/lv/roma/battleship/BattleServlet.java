@@ -43,7 +43,9 @@ public class BattleServlet extends HttpServlet {
 
         if (game.isReady()) {
             response.sendRedirect("/setup");
-        } else {
+
+        }
+        else {
             request.getRequestDispatcher("/WEB-INF/waitingRoomLogin.jsp")
                     .include(request,response);
 

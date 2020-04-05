@@ -15,4 +15,5 @@ public class Game {
     public boolean isReady(){
         return player1 != null && player2 != null;
     }
+    public boolean gameReady() { return player1.getOwnField().isValid() && player2.getOwnField().isValid();}
 }

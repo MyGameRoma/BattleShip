@@ -6,6 +6,6 @@
 </head>
 <body>
 <h1>${sessionScope.player.name}</h1>
-<h3>Please wait your opponent...</h3>
+<h3>Please wait your opponent to place ships...</h3>
 </body>
 </html>
